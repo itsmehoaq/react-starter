@@ -1,21 +1,17 @@
 import React from 'react';
 import {Button, StyleSheet, Text, View} from 'react-native';
+import {UserRegistration} from '../components/userRegistration';
 
 const SignUp = ({navigation}) => {
     function navigateSignIn() {
         navigation.navigate('SignIn');
     }
 
-    function navigateHome() {
-        navigation.navigate('Home');
-    }
-
     return (<View style={styles.mainView}>
             <Text>Sign up</Text>
-            <Button text={'Click here to Sign in'}
+            <UserRegistration />
+            <Button title={'Click here to Sign in'}
                     onPress={navigateSignIn}/>
-            {/*<Button text={'Return to Home'}*/}
-            {/*        onPress={navigateHome}/>*/}
         </View>)
 }
 
